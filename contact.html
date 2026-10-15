@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Daffa Afrizal Wijaya</title>
+  <meta name="description" content="Get in touch with Daffa Afrizal Wijaya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>Daffa A. W.</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="ch">Contact</div>
+      <h2>Let's connect</h2>
+      <div class="contact-grid">
+        <div>
+          <p>I'm open to IoT engineer, RF engineer, telco, or fiber optic network roles. Feel free to reach me through any of the channels below.</p>
+          <div class="channels">
+            <div class="chan"><span class="k">Email</span><a class="v" id="em" href="mailto:daffaafrizal7@gmail.com">daffaafrizal7@gmail.com</a><button class="copy" type="button" data-copy="em">Copy</button></div>
+            <div class="chan"><span class="k">GitHub</span><a class="v" href="https://github.com/daffaafrizal" target="_blank" rel="noopener">github.com/daffaafrizal</a><span></span></div>
+            <div class="chan"><span class="k">LinkedIn</span><a class="v" id="li" href="https://www.linkedin.com/in/daffaafw" target="_blank" rel="noopener">linkedin.com/in/daffaafw</a><button class="copy" type="button" data-copy="li">Copy</button></div>
+            <div class="chan"><span class="k">Location</span><span class="v">Malang, East Java, Indonesia</span><span></span></div>
+          </div>
+        </div>
+        <form id="contactForm" novalidate>
+          <label for="fName">Name<input id="fName" name="name" required placeholder="Your name"></label>
+          <label for="fMail">Email<input id="fMail" name="email" type="email" required placeholder="name@company.com"></label>
+          <label for="fMsg">Message<textarea id="fMsg" name="msg" required placeholder="Hi Daffa, we'd like to invite you to…"></textarea></label>
+          <button class="btn primary" type="submit">Send via Gmail</button>
+          <p class="form-note">Opens Gmail with your message ready to send to daffaafrizal7@gmail.com.</p>
+          <p id="formOut" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Daffa Afrizal Wijaya</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
