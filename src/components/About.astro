@@ -1,0 +1,52 @@
+---
+import { summary, facts } from "../data/profile";
+import { education } from "../data/education";
+import { skills } from "../data/skills";
+import Tags from "./Tags.astro";
+---
+<section id="about">
+  <div class="wrap">
+    <div class="ch">About Me</div>
+    <h2>Connecting devices, data, and people</h2>
+    <div class="about-grid">
+      <div>
+        {summary.map((p) => <p>{p}</p>)}
+      </div>
+      <dl class="facts">
+        {facts.map((f) => <div class="fact"><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+      </dl>
+    </div>
+
+    <div class="edu">
+      <h3>Education</h3>
+      <ol class="edu-list">
+        {education.map((e) => (
+          <li class="edu-item">
+            <div class="edu-side">
+              <span class="edu-date">{e.period}</span>
+              <img class="edu-logo" src={e.logo} alt={`${e.school} logo`} width="160" height="160" loading="lazy" />
+            </div>
+            <div>
+              <h4>{e.school}</h4>
+              <p>{e.degree}</p>
+              <p class="edu-desc">{e.description}</p>
+              <Tags items={e.tags} />
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <div class="skills">
+      <h3>Skills</h3>
+      <div class="skill-grid">
+        {skills.map((s) => (
+          <div>
+            <h4>// {s.group}</h4>
+            <Tags items={s.items} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

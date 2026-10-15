@@ -1,0 +1,26 @@
+---
+import { certifications } from "../data/certifications";
+import Tags from "./Tags.astro";
+---
+<section id="certifications">
+  <div class="wrap">
+    <div class="ch">Certifications</div>
+    <h2>Licenses and certifications</h2>
+    <div class="cert-list">
+      {certifications.map((c) => (
+        <article class="cert">
+          <div class="cert-head">
+            <span class="logo"><img src={c.logo.src} alt={c.logo.alt} width={c.logo.width} height={c.logo.height} /></span>
+            <span class="valid">{c.validity}</span>
+          </div>
+          <h3>{c.title}</h3>
+          <p>{c.description}</p>
+          <div class="cert-foot">
+            <span class="cred">{c.credential}</span>
+            <Tags items={c.tags} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

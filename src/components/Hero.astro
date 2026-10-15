@@ -1,0 +1,17 @@
+---
+import { profile } from "../data/profile";
+---
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="ch">{profile.role}</div>
+      <h1>{profile.firstName} <span>{profile.lastName}</span></h1>
+      <p class="role">{profile.tagline}</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <img class="avatar" src={profile.photo} alt={`Portrait of ${profile.name}`} width="720" height="720" />
+  </div>
+</section>

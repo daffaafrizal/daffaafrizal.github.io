@@ -1,0 +1,13 @@
+---
+import { profile, sections } from "../data/profile";
+---
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home"><span class="dot" aria-hidden="true"></span>{profile.handle}</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        {sections.map((s) => <li><a href={`#${s.id}`}>{s.label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -9,8 +9,8 @@
   });
 
   // form: opens a pre-filled email to Daffa (Gmail compose, with a mail-app fallback link)
-  var TO="daffaafrizal7@gmail.com";
   var f=document.getElementById("contactForm"), out=document.getElementById("formOut");
+  var TO=f?f.dataset.to:""; // set from src/data/profile.ts
   if(f)f.addEventListener("submit",function(e){
     e.preventDefault();
     var n=f.fName.value.trim(), m=f.fMail.value.trim(), msg=f.fMsg.value.trim();

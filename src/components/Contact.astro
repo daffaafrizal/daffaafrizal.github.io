@@ -1,0 +1,28 @@
+---
+import { profile } from "../data/profile";
+---
+<section id="contact">
+  <div class="wrap">
+    <div class="ch">Contact</div>
+    <h2>Let's connect</h2>
+    <div class="contact-grid">
+      <div>
+        <p>I'm open to IoT engineer, RF engineer, telco, or fiber optic network roles. Feel free to reach me through any of the channels below.</p>
+        <div class="channels">
+          <div class="chan"><span class="k">Email</span><a class="v" id="em" href={`mailto:${profile.email}`}>{profile.email}</a><button class="copy" type="button" data-copy="em">Copy</button></div>
+          <div class="chan"><span class="k">GitHub</span><a class="v" href={profile.github.url} target="_blank" rel="noopener">{profile.github.label}</a><span></span></div>
+          <div class="chan"><span class="k">LinkedIn</span><a class="v" id="li" href={profile.linkedin.url} target="_blank" rel="noopener">{profile.linkedin.label}</a><button class="copy" type="button" data-copy="li">Copy</button></div>
+          <div class="chan"><span class="k">Location</span><span class="v">{profile.location}</span><span></span></div>
+        </div>
+      </div>
+      <form id="contactForm" novalidate data-to={profile.email}>
+        <label for="fName">Name<input id="fName" name="name" required placeholder="Your name" /></label>
+        <label for="fMail">Email<input id="fMail" name="email" type="email" required placeholder="name@company.com" /></label>
+        <label for="fMsg">Message<textarea id="fMsg" name="msg" required placeholder="Hi Daffa, we'd like to invite you to…"></textarea></label>
+        <button class="btn primary" type="submit">Send via Gmail</button>
+        <p class="form-note">Opens Gmail with your message ready to send to {profile.email}.</p>
+        <p id="formOut" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>

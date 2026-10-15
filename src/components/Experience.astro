@@ -1,0 +1,40 @@
+---
+import { experience } from "../data/experience";
+import Tags from "./Tags.astro";
+---
+<section id="experience">
+  <div class="wrap">
+    <div class="ch">Experience</div>
+    <h2>Work experience</h2>
+    <div class="proj-list">
+      {experience.map((x) => (
+        <article class:list={["proj", { "has-photo": x.photo }]}>
+          <div class="proj-meta">
+            <span class="logo"><img src={x.logo.src} alt={x.logo.alt} width={x.logo.width} height={x.logo.height} /></span>
+            <span class="kind">{x.type}</span>
+            <span>{x.period}</span>
+            <span>{x.location}</span>
+          </div>
+          <div>
+            <h3>{x.role}</h3>
+            <p class="org">{x.company}</p>
+            <p>{x.description}</p>
+            <Tags items={x.tags} />
+          </div>
+          {x.photo && (
+            <figure class="proj-photo tall">
+              <img
+                src={x.photo.src}
+                alt={x.photo.alt}
+                width={x.photo.width}
+                height={x.photo.height}
+                loading="lazy"
+                style={x.photo.position ? `object-position:${x.photo.position}` : undefined}
+              />
+            </figure>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

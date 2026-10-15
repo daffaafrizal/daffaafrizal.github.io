@@ -1,0 +1,31 @@
+---
+import { projects } from "../data/projects";
+---
+<section id="projects">
+  <div class="wrap">
+    <div class="ch">Projects</div>
+    <h2>Selected work</h2>
+    <div class="proj-list">
+      {projects.map((p) => (
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="kind">{p.kind}</span>
+            <span>{p.period}</span>
+            {p.org && <span>{p.org}</span>}
+            <span class="band">{p.band}</span>
+          </div>
+          <div>
+            <h3>{p.title}</h3>
+            <p>{p.summary}</p>
+            <ul>{p.points.map((pt) => <li>{pt}</li>)}</ul>
+          </div>
+          <figure class:list={["proj-photo", { duo: p.photoLayout === "duo" }]}>
+            {p.photos.map((ph) => (
+              <img src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} loading="lazy" />
+            ))}
+          </figure>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
