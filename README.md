@@ -3,17 +3,10 @@
 Website portofolio statis (HTML + CSS + JavaScript, tanpa framework).
 
 ## Struktur
-- `index.html` — Home
-- `about.html` — About Me (pendidikan, keahlian)
-- `experience.html` — Pengalaman kerja
-- `certifications.html` — Sertifikasi
-- `projects.html` — Project
-- `contact.html` — Kontak
-- `assets/` — foto profil, foto project, logo sertifikasi
+- `index.html` — seluruh isi website dalam satu halaman scroll: Home, About Me, Experience, Certifications, Projects, Contact (tiap bagian diawali komentar `<!-- NAMA BAGIAN -->`)
+- `assets/` — foto profil, foto project/pengalaman, logo
 - `style.css` — tampilan, warna, dan mode gelap
-- `script.js` — animasi spektrum, tombol salin, form kontak
-
-Header (menu) dan footer ada di setiap file `.html`. Kalau mengubah menu atau footer, ubah di keenam file.
+- `script.js` — tombol salin, form kontak (Gmail), menu aktif saat scroll
 
 ## Menjalankan
 Buka folder ini di VS Code, lalu klik kanan `index.html` → **Open with Live Server**

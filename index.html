@@ -14,15 +14,15 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>Daffa A. W.</a>
+    <a class="brand" href="#home"><span class="dot" aria-hidden="true"></span>daffaafrizalwijaya</a>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -33,26 +33,353 @@
   <section class="hero" id="home">
     <div class="wrap hero-grid">
       <div>
-        <img class="avatar" src="assets/profile.jpg" alt="Portrait of Daffa Afrizal Wijaya" width="480" height="480">
         <div class="ch">Telecommunication Engineer</div>
         <h1>Daffa Afrizal <span>Wijaya</span></h1>
         <p class="role">Final-year Digital Telecommunication Networks student at State Polytechnic of Malang, graduating January 2027. Focused on IoT, radio frequency (RF), AI, telco, and fiber optic networks.</p>
         <div class="btns">
-          <a class="btn primary" href="projects.html">View Projects</a>
-          <a class="btn ghost" href="contact.html">Contact Me</a>
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
         </div>
       </div>
-      <figure class="scope" aria-label="Signal spectrum animation">
-        <div class="scope-top"><span><b>SPECTRUM</b> · RBW 100 kHz</span><span class="live">● LIVE</span></div>
-        <canvas id="spec" aria-hidden="true"></canvas>
-        <div class="scope-bot"><span>2.400 GHz</span><span>CF 2.437 GHz</span><span>2.483 GHz</span></div>
-      </figure>
+      <img class="avatar" src="assets/profile.jpg" alt="Portrait of Daffa Afrizal Wijaya" width="720" height="720">
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="wrap">
+      <div class="ch">About Me</div>
+      <h2>Connecting devices, data, and people</h2>
+      <div class="about-grid">
+        <div>
+          <p>D4 Digital Telecommunications Network transfer student at Politeknik Negeri Malang with a current GPA of 3.51 out of 4.00. Currently working on a thesis, with graduation targeted for January 2027. Previously earned a D3 in Telecommunications Engineering from the same institution with a GPA of 3.49.</p>
+          <p>Focused on telecommunications networks, IoT, VHF/UHF radio and antennas, industrial automation, electrical systems, and renewable energy. During an internship as a Network Access Engineer, monitored an FTTH network serving approximately 2,800 customers daily and coordinated with field technicians to resolve customer outages. Built an open dipole antenna, measured its frequency-matching point using an SWR/Power Meter and NanoVNA, developed IoT devices, designed PCB layouts, and worked on projects including a biodigester, a solar-powered air-quality index monitoring device, an A* algorithm-based emergency response system, and a biogas-filter degradation detection system.</p>
+          <p>Previously served as class president for three years, Student Team Coordinator in the 2025 BIMA Program, and division coordinator for new-student orientation activities. Seeking to develop technical and leadership skills to support safe, efficient, and sustainable industrial operations.</p>
+        </div>
+        <dl class="facts">
+          <div class="fact"><dt>Education</dt><dd>D4 Digital Telecommunication Networks, State Polytechnic of Malang (expected Jan 2027)</dd></div>
+          <div class="fact"><dt>Focus</dt><dd>IoT, Radio Frequency (RF), AI, Telco, Fiber Optic Networks</dd></div>
+          <div class="fact"><dt>Location</dt><dd>Malang, East Java, Indonesia</dd></div>
+          <div class="fact"><dt>Status</dt><dd>Open to full-time roles</dd></div>
+        </dl>
+      </div>
+
+      <div class="edu">
+        <h3>Education</h3>
+        <ol class="edu-list">
+          <li class="edu-item">
+            <div class="edu-side">
+              <span class="edu-date">Aug 2025 – Jan 2027 (expected)</span>
+              <img class="edu-logo" src="assets/polinema.png" alt="State Polytechnic of Malang logo" width="160" height="160" loading="lazy">
+            </div>
+            <div>
+              <h4>State Polytechnic of Malang</h4>
+              <p>Bachelor's degree (D4), Digital Telecommunication Networks</p>
+              <p class="edu-desc">Continued studies through a diploma-to-applied-bachelor transfer program, deepening expertise in digital telecommunication networks. Coursework included radio communication systems, digital image processing, wireless ad hoc networks, control systems, and avionics navigation, combining theory with laboratory practice in signal transmission, network design, and system modeling. Final-year research focused on the application of IoT and artificial intelligence.</p>
+            </div>
+          </li>
+          <li class="edu-item">
+            <div class="edu-side">
+              <span class="edu-date">Aug 2022 – Jun 2025</span>
+              <img class="edu-logo" src="assets/polinema.png" alt="State Polytechnic of Malang logo" width="160" height="160" loading="lazy">
+            </div>
+            <div>
+              <h4>State Polytechnic of Malang</h4>
+              <p>Associate's degree (D3), Telecommunications Engineering</p>
+              <p class="edu-desc">Studied telecommunication engineering with a strong practical focus, covering fiber optic and wireless communication systems, computer networking, digital and analog electronics, and microcontroller-based systems. Gained hands-on experience in network configuration, signal measurement, and installation and testing of telecommunication equipment through laboratory work and practical projects. Developed skills in designing and building electronic and IoT devices, preparing technical documentation, and solving problems in team-based engineering projects.</p>
+              <div class="tags"><span class="tag">MikroTik</span><span class="tag">Computer Networking</span></div>
+            </div>
+          </li>
+          <li class="edu-item">
+            <div class="edu-side">
+              <span class="edu-date">Jul 2019 – Jul 2021</span>
+              <img class="edu-logo" src="assets/smkn1-lumajang.png" alt="SMK Negeri 1 Lumajang logo" width="160" height="160" loading="lazy">
+            </div>
+            <div>
+              <h4>SMK Negeri 1 Lumajang</h4>
+              <p>Vocational High School, Computer &amp; Network Engineering</p>
+              <p class="edu-desc">Provided IT support during a vocational high school internship, troubleshooting hardware, software, and network issues for staff computers. Installed and configured operating systems, applications, and peripherals such as printers. Assisted with setting up and maintaining the local network, including cabling and basic router and switch configuration, and helped users resolve day-to-day technical problems.</p>
+              <div class="tags"><span class="tag">MikroTik</span><span class="tag">Computer Networking</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-grid">
+          <div>
+            <h4>// Networking</h4>
+            <div class="tags"><span class="tag">TCP/IP</span><span class="tag">Routing &amp; Switching</span><span class="tag">VLAN</span><span class="tag">MikroTik</span><span class="tag">Cisco Packet Tracer</span></div>
+          </div>
+          <div>
+            <h4>// Telecommunications</h4>
+            <div class="tags"><span class="tag">Fiber Optics</span><span class="tag">Link Budget</span><span class="tag">Wireless / RF</span><span class="tag">Cellular 4G/5G</span></div>
+          </div>
+          <div>
+            <h4>// IoT &amp; Embedded</h4>
+            <div class="tags"><span class="tag">ESP32</span><span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">MQTT</span></div>
+          </div>
+          <div>
+            <h4>// Software &amp; AI</h4>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Kotlin / Android</span><span class="tag">ANN</span><span class="tag">Git / GitHub</span></div>
+          </div>
+          <div>
+            <h4>// Design &amp; Network Software</h4>
+            <div class="tags"><span class="tag">Autodesk Eagle</span><span class="tag">Multisim</span><span class="tag">Proteus</span><span class="tag">Winbox</span></div>
+          </div>
+          <div>
+            <h4>// Test &amp; Measurement</h4>
+            <div class="tags"><span class="tag">Oscilloscope</span><span class="tag">Multimeter</span><span class="tag">NanoVNA</span><span class="tag">Spectrum Analyzer</span><span class="tag">RF Power Meter</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="ch">Experience</div>
+      <h2>Work experience</h2>
+      <div class="proj-list">
+        <article class="proj">
+          <div class="proj-meta">
+            <span class="logo"><img src="assets/polinema.png" alt="State Polytechnic of Malang" width="160" height="160"></span>
+            <span class="kind">Part-time</span>
+            <span>Aug 2024 – Present</span>
+            <span>Malang, East Java · On-site</span>
+          </div>
+          <div>
+            <h3>Academic Assistant</h3>
+            <p class="org">State Polytechnic of Malang</p>
+            <p>Actively involved in supporting a range of faculty-led research and community service projects, particularly in the areas of renewable energy, biogas technology, the Internet of Things (IoT), and Artificial Intelligence.</p>
+            <div class="tags"><span class="tag">Research and Development (R&amp;D)</span><span class="tag">Academic Administration</span></div>
+          </div>
+        </article>
+
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="logo"><img src="assets/enha.png" alt="Enha" width="350" height="80"></span>
+            <span class="kind">Apprenticeship</span>
+            <span>Jan 2026 – Feb 2026</span>
+            <span>Batu, East Java · On-site</span>
+          </div>
+          <div>
+            <h3>Electrical and Mechanical Engineer</h3>
+            <p class="org">PT. Enha Bena Nusantara</p>
+            <p>Designed PCB layouts in Autodesk Eagle for electrical systems and created a catalog of mechanical and electrical equipment designs, including machines, frames, racks, and electrical panels. Assembled and installed industrial machinery such as conveyors, and operated a laser welding machine and a Baison steel laser cutting machine. Assembled and programmed IoT devices for automation and monitoring, assisted with wiring single-phase and three-phase electrical panels, and prepared technical drawings and assembly procedures as production references.</p>
+            <div class="tags"><span class="tag">Autodesk Eagle</span><span class="tag">PCB Design</span><span class="tag">Electrical Panels</span><span class="tag">Industrial Machinery</span><span class="tag">Laser Welding</span><span class="tag">Laser Cutting</span><span class="tag">IoT</span><span class="tag">Technical Drawing</span></div>
+          </div>
+          <figure class="proj-photo tall"><img src="assets/experience-enha.jpg" alt="Daffa operating a handheld laser welder on a fixture table in the workshop at PT. Enha Bena Nusantara" width="722" height="1280" loading="lazy"></figure>
+        </article>
+
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="logo"><img src="assets/infly-networks.png" alt="Infly Networks" width="480" height="218"></span>
+            <span class="kind">Internship</span>
+            <span>Jul 2024 – Nov 2024</span>
+            <span>Probolinggo, East Java · On-site</span>
+          </div>
+          <div>
+            <h3>Network Operations Center</h3>
+            <p class="org">PT. Urban Teknologi Nusantara</p>
+            <p>Monitored FTTH network quality and performance for approximately 2,800 customers using Winbox, identifying outages and connectivity issues from monitoring data. Reported outages to field technicians and took part in troubleshooting and service restoration. Registered Optical Network Terminal serial numbers for new customers, and recorded network incidents, maintenance activities, and daily operational reports.</p>
+            <div class="tags"><span class="tag">OLT</span><span class="tag">MikroTik</span><span class="tag">Winbox</span><span class="tag">FTTH</span><span class="tag">ONT Registration</span><span class="tag">Troubleshooting</span></div>
+          </div>
+          <figure class="proj-photo tall"><img src="assets/experience-noc.jpg" alt="Daffa standing next to the OLT and network equipment rack at PT. Urban Teknologi Nusantara" width="449" height="800" loading="lazy" style="object-position:center 80%"></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="wrap">
+      <div class="ch">Certifications</div>
+      <h2>Licenses and certifications</h2>
+      <div class="cert-list">
+        <article class="cert">
+          <div class="cert-head">
+            <span class="logo"><img src="assets/mikrotik.png" alt="MikroTik" width="2000" height="345"></span>
+            <span class="valid">Aug 2026 – Aug 2029</span>
+          </div>
+          <h3>MikroTik Certified Network Associate (MTCNA)</h3>
+          <p>Demonstrates foundational knowledge and practical skills in MikroTik RouterOS, and validates the ability to configure, manage, and troubleshoot MikroTik-based networks.</p>
+          <div class="cert-foot">
+            <span class="cred">Credential ID · 2608NA2481</span>
+            <div class="tags"><span class="tag">IP Addressing</span><span class="tag">Routing</span><span class="tag">Bridging</span><span class="tag">Wireless</span><span class="tag">Firewall</span><span class="tag">NAT</span><span class="tag">DHCP</span><span class="tag">QoS (Queues)</span><span class="tag">VPN</span><span class="tag">Network Security</span><span class="tag">RouterOS Administration</span></div>
+          </div>
+        </article>
+
+        <article class="cert">
+          <div class="cert-head">
+            <span class="logo"><img src="assets/bnsp.png" alt="BNSP" width="2000" height="771"></span>
+            <span class="valid">Aug 2024 – Aug 2027</span>
+          </div>
+          <h3>Junior Network Administrator</h3>
+          <p>In-depth expertise in managing and maintaining network infrastructure, from configuration and troubleshooting to implementing various network technologies, enabling me to design, manage, and keep networks performing optimally across a variety of work environments.</p>
+          <div class="cert-foot">
+            <span class="cred">Badan Nasional Sertifikasi Profesi</span>
+            <div class="tags"><span class="tag">Network Configuration</span><span class="tag">Troubleshooting</span><span class="tag">VLAN</span><span class="tag">Routing</span><span class="tag">Switching</span></div>
+          </div>
+        </article>
+
+        <article class="cert">
+          <div class="cert-head">
+            <span class="logo"><img src="assets/bnsp.png" alt="BNSP" width="2000" height="771"></span>
+            <span class="valid">May 2024 – May 2027</span>
+          </div>
+          <h3>Customer Experience Tester (CET) Walk Tester (WT) Drivetester</h3>
+          <p>Network optimization competencies: comprehensively measuring, evaluating, and monitoring network performance, collecting user experience data to assess service quality, and conducting compliance inspections and drive tests to identify areas for improvement, so the network runs optimally and delivers the best possible service to users.</p>
+          <div class="cert-foot">
+            <span class="cred">Badan Nasional Sertifikasi Profesi</span>
+            <div class="tags"><span class="tag">Drive Test</span><span class="tag">Walk Test</span><span class="tag">Network Performance</span><span class="tag">QoS / QoE</span><span class="tag">Compliance Inspection</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="ch">Projects</div>
+      <h2>Selected work</h2>
+      <div class="proj-list">
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="kind">Community Service</span>
+            <span>Mar 2026 – Oct 2026</span>
+            <span>State Polytechnic of Malang</span>
+            <span class="band">Biogas · Renewable Energy</span>
+          </div>
+          <div>
+            <h3>Green Energy Self-Sufficiency Innovations at the Gadingkulon 3R Solid Waste Management Facility as a Model for Energy and Environmental Self-Reliance</h3>
+            <p>A community service initiative to develop a green energy-based waste management model through the implementation of biodigester technology at the Gadingkulon 3R Waste Treatment Facility.</p>
+            <ul>
+              <li>Utilizing organic waste as feedstock for biogas and organic fertilizer</li>
+              <li>Optimizing the 3R principles (Reduce, Reuse, Recycle)</li>
+              <li>Building community capacity in community-based renewable energy management</li>
+            </ul>
+          </div>
+          <figure class="proj-photo"><img src="assets/project-gadingkulon.jpg" alt="Community service team in front of the green energy innovation banner at TPST 3R Gadingkulon" width="1280" height="960" loading="lazy"></figure>
+        </article>
+
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="kind">Community Service</span>
+            <span>Aug 2025 – Nov 2025</span>
+            <span class="band">Waste-to-Energy</span>
+          </div>
+          <div>
+            <h3>Optimizing the Conversion of Energy from Biodegradable Waste</h3>
+            <p>A community service program focused on optimizing biodegradable waste management at TPST 3R Mulyoagung through technology implementation, community training, and stakeholder collaboration.</p>
+            <ul>
+              <li>Converting organic waste into value-added products, including compost and biogas</li>
+              <li>Promoting sustainable waste management practices</li>
+              <li>Strengthening community capacity and environmental awareness</li>
+            </ul>
+          </div>
+          <figure class="proj-photo"><img src="assets/project-mulyoagung.jpg" alt="Students measuring the site at TPST 3R Mulyoagung" width="1280" height="960" loading="lazy"></figure>
+        </article>
+
+        <article class="proj has-photo">
+          <div class="proj-meta">
+            <span class="kind">Final Project (D3)</span>
+            <span>2024 – 2025</span>
+            <span>State Polytechnic of Malang</span>
+            <span class="band">IoT · Solar Power</span>
+          </div>
+          <div>
+            <h3>IoT-Based Air Quality Monitoring System Integrated with Solar Panels for Energy Efficiency</h3>
+            <p>An air quality monitoring station built around an ESP32 that measures pollutant levels and reports them as the Indonesian Air Pollutant Standard Index (ISPU), powered by a solar panel and battery so it can run on its own energy.</p>
+            <ul>
+              <li>Monitors PM10, PM2.5, CO, O₃, and HC, plus temperature and humidity</li>
+              <li>Custom ESP32 PCB with sensor connectors, powered by a solar charge controller, battery, and DC-DC converter</li>
+              <li>Mobile app showing the ISPU score, critical parameter, and per-pollutant category chart</li>
+            </ul>
+          </div>
+          <figure class="proj-photo duo">
+            <img src="assets/project-airquality-hardware.jpg" alt="Control panel with solar charge controller, ESP32 board, DC-DC converter, and battery" width="720" height="1279" loading="lazy">
+            <img src="assets/project-airquality-app.jpg" alt="Mobile app screen showing an ISPU score of 90 and a pollutant index chart" width="375" height="812" loading="lazy">
+          </figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="ch">Contact</div>
+      <h2>Let's connect</h2>
+      <div class="contact-grid">
+        <div>
+          <p>I'm open to IoT engineer, RF engineer, telco, or fiber optic network roles. Feel free to reach me through any of the channels below.</p>
+          <div class="channels">
+            <div class="chan"><span class="k">Email</span><a class="v" id="em" href="mailto:daffaafrizal7@gmail.com">daffaafrizal7@gmail.com</a><button class="copy" type="button" data-copy="em">Copy</button></div>
+            <div class="chan"><span class="k">GitHub</span><a class="v" href="https://github.com/daffaafrizal" target="_blank" rel="noopener">github.com/daffaafrizal</a><span></span></div>
+            <div class="chan"><span class="k">LinkedIn</span><a class="v" id="li" href="https://www.linkedin.com/in/daffaafw" target="_blank" rel="noopener">linkedin.com/in/daffaafw</a><button class="copy" type="button" data-copy="li">Copy</button></div>
+            <div class="chan"><span class="k">Location</span><span class="v">Malang, East Java, Indonesia</span><span></span></div>
+          </div>
+        </div>
+        <form id="contactForm" novalidate>
+          <label for="fName">Name<input id="fName" name="name" required placeholder="Your name"></label>
+          <label for="fMail">Email<input id="fMail" name="email" type="email" required placeholder="name@company.com"></label>
+          <label for="fMsg">Message<textarea id="fMsg" name="msg" required placeholder="Hi Daffa, we'd like to invite you to…"></textarea></label>
+          <button class="btn primary" type="submit">Send via Gmail</button>
+          <p class="form-note">Opens Gmail with your message ready to send to daffaafrizal7@gmail.com.</p>
+          <p id="formOut" role="status"></p>
+        </form>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap"><span>© 2026 Daffa Afrizal Wijaya</span></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <p class="foot-name">Daffa Afrizal Wijaya</p>
+        <p class="foot-role">Telecommunication Engineer</p>
+        <h3>Contact Me</h3>
+        <ul class="foot-list">
+          <li><a href="mailto:daffaafrizal7@gmail.com">daffaafrizal7@gmail.com</a></li>
+          <li>Malang, East Java, Indonesia</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Focus Areas</h3>
+        <ul class="foot-list">
+          <li>Internet of Things (IoT)</li>
+          <li>Radio Frequency (RF)</li>
+          <li>Artificial Intelligence</li>
+          <li>Telecommunications</li>
+          <li>Fiber Optic Networks</li>
+        </ul>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Links</h3>
+        <ul class="foot-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <div class="socials">
+        <a href="mailto:daffaafrizal7@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a href="https://www.linkedin.com/in/daffaafw" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://github.com/daffaafrizal" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg></a>
+      </div>
+      <p class="copyright">© 2026 Daffa Afrizal Wijaya. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

@@ -26,46 +26,50 @@
     out.appendChild(a);out.appendChild(document.createTextNode("."));
   });
 
-  // spectrum canvas (home page only)
-  var c=document.getElementById("spec");
-  if(!c)return;
-  var ctx=c.getContext("2d");
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var t=0;
-  function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
-  function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;ctx.setTransform(d,0,0,d,0,0)}
-  // three Wi-Fi channels (1, 6, 11) as carriers
-  var carriers=[{x:.12,w:.07,h:.62},{x:.5,w:.07,h:.88},{x:.88,w:.07,h:.5}];
-  function draw(){
-    var w=c.clientWidth,h=c.clientHeight;
-    var line=css("--line"),acc=css("--accent"),sig=css("--signal"),bg=css("--bg");
-    ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
-    ctx.strokeStyle=line;ctx.lineWidth=1;
-    for(var i=1;i<10;i++){var gx=w*i/10;ctx.beginPath();ctx.moveTo(gx,0);ctx.lineTo(gx,h);ctx.stroke()}
-    for(var j=1;j<6;j++){var gy=h*j/6;ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(w,gy);ctx.stroke()}
-    var pts=[],N=Math.max(120,Math.floor(w/2));
-    for(var k=0;k<=N;k++){
-      var x=k/N, y=.06+.03*Math.sin(k*1.7+t*3)*Math.cos(k*.31+t)+.02*Math.random()*(reduce?0:1);
-      carriers.forEach(function(cr,ci){
-        var d=(x-cr.x)/cr.w, flat=Math.exp(-Math.pow(Math.abs(d),6));
-        y+=cr.h*flat*(0.92+.08*Math.sin(t*2+ci*2));
-      });
-      pts.push([x*w,h-y*h*.95]);
-    }
-    var g=ctx.createLinearGradient(0,0,0,h);
-    g.addColorStop(0,acc);g.addColorStop(1,"transparent");
-    ctx.globalAlpha=.22;ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(0,h);
-    pts.forEach(function(p){ctx.lineTo(p[0],p[1])});ctx.lineTo(w,h);ctx.closePath();ctx.fill();ctx.globalAlpha=1;
-    ctx.strokeStyle=acc;ctx.lineWidth=1.6;ctx.beginPath();
-    pts.forEach(function(p,i){i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])});ctx.stroke();
-    // marker on peak
-    var peak=pts.reduce(function(a,b){return b[1]<a[1]?b:a});
-    ctx.fillStyle=sig;ctx.beginPath();ctx.moveTo(peak[0],peak[1]-4);ctx.lineTo(peak[0]-5,peak[1]-12);ctx.lineTo(peak[0]+5,peak[1]-12);ctx.closePath();ctx.fill();
-    ctx.font="11px "+css("--f-mono");ctx.fillStyle=sig;ctx.textAlign="center";
-    ctx.fillText("M1 "+(-38-(Math.sin(t*2)*1.5)).toFixed(1)+" dBm",Math.min(Math.max(peak[0],48),w-48),Math.max(peak[1]-18,12));
-    t+=.016;
-    if(!reduce)requestAnimationFrame(draw);
+  // highlight the menu item of the section currently on screen
+  var links=[].slice.call(document.querySelectorAll(".nav ul a"));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+en.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+    document.querySelectorAll("main section").forEach(function(s){io.observe(s)});
   }
-  size();window.addEventListener("resize",function(){size();if(reduce)draw()});
-  draw();
+
+  // scroll effects
+  var reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var bar=document.createElement("div");bar.className="scroll-progress";bar.setAttribute("aria-hidden","true");
+  document.body.appendChild(bar);
+  var ticking=false;
+  function setProgress(){
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform="scaleX("+(max>0?Math.min(window.scrollY/max,1):0)+")";
+    ticking=false;
+  }
+  window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(setProgress)}},{passive:true});
+  window.addEventListener("resize",setProgress);
+  setProgress();
+
+  if(!reduceMotion&&"IntersectionObserver" in window){
+    var items=[].slice.call(document.querySelectorAll(".hero .ch,.hero h1,.hero .role,.hero .btns,.avatar,main section:not(.hero) .ch,main section:not(.hero) h2,.about-grid>*,.edu h3,.edu-item,.skills h3,.skill-grid>div,.proj,.cert,.chan,#contactForm"));
+    // siblings appear one after another
+    items.forEach(function(el){
+      var i=[].indexOf.call(el.parentNode.children,el);
+      el.style.setProperty("--d",Math.min(i,5)*90+"ms");
+      el.classList.add("reveal");
+    });
+    // works in both directions: an element that left through the top slides back down when scrolling up
+    var ro=new IntersectionObserver(function(es){es.forEach(function(en){
+      var el=en.target;
+      if(en.isIntersecting){el.classList.add("in")}
+      else{el.classList.remove("in");el.classList.toggle("from-top",en.boundingClientRect.top<0)}
+    })},{rootMargin:"0px 0px -8% 0px",threshold:.08});
+    items.forEach(function(el){ro.observe(el)});
+  }
+
+  // back-to-top button
+  var top=document.createElement("button");
+  top.type="button";top.className="to-top";top.setAttribute("aria-label","Back to top");top.textContent="↑";
+  document.body.appendChild(top);
+  top.addEventListener("click",function(){window.scrollTo({top:0,behavior:reduceMotion?"auto":"smooth"})});
+  function toggleTop(){top.classList.toggle("show",window.scrollY>600)}
+  window.addEventListener("scroll",toggleTop,{passive:true});
+  toggleTop();
 })();
