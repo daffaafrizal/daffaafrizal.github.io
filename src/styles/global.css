@@ -22,7 +22,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1
 body{min-height:100vh;display:flex;flex-direction:column}
 main{flex:1}
 /* all body text justified */
-main p,main li{text-align:justify;hyphens:auto}
+main p,main li{text-align:justify;hyphens:none;overflow-wrap:break-word}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
