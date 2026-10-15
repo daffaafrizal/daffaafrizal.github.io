@@ -9,6 +9,15 @@ export const certifications = [
     tags: ["IP Addressing", "Routing", "Bridging", "Wireless", "Firewall", "NAT", "DHCP", "QoS (Queues)", "VPN", "Network Security", "RouterOS Administration"],
   },
   {
+    title: "Network Access Planning",
+    logo: { src: "/assets/bnsp.png", alt: "BNSP", width: 2000, height: 771 },
+    validity: "Jul 2025 – Jul 2028",
+    description:
+      "BNSP competency certification in network access planning, covering site surveys, access network design including fiber optic/FTTH, equipment and cable route planning, bill of materials preparation, and technical documentation for network deployment.",
+    credential: "Badan Nasional Sertifikasi Profesi",
+    tags: ["Site Survey", "Access Network Design", "Fiber Optic / FTTH", "Cable Route Planning", "Bill of Materials", "Technical Documentation"],
+  },
+  {
     title: "Junior Network Administrator",
     logo: { src: "/assets/bnsp.png", alt: "BNSP", width: 2000, height: 771 },
     validity: "Aug 2024 – Aug 2027",
