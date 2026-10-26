@@ -12,7 +12,7 @@ export const experience = [
     tags: ["Research and Development (R&D)", "Academic Administration"],
     photo: {
       src: "/assets/experience-pmi.jpg",
-      alt: "Daffa with faculty and staff in front of the Palang Merah Indonesia (PMI) Malang building",
+      alt: "Group photo with faculty and staff in front of the Palang Merah Indonesia (PMI) Malang building",
       width: 800,
       height: 600,
       layout: "wide",
