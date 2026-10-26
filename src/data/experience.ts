@@ -1,4 +1,4 @@
-// Newest first. `photo` is optional; `photoPosition` adjusts the crop (CSS object-position).
+// Newest first. `photo` is optional; `position` adjusts the crop (CSS object-position); `layout: "wide"` keeps a landscape photo's 4:3 frame instead of the default portrait 3:4 crop.
 export const experience = [
   {
     role: "Academic Assistant",
@@ -10,6 +10,13 @@ export const experience = [
     description:
       "Actively involved in supporting a range of faculty-led research and community service projects, particularly in the areas of renewable energy, biogas technology, the Internet of Things (IoT), and Artificial Intelligence.",
     tags: ["Research and Development (R&D)", "Academic Administration"],
+    photo: {
+      src: "/assets/experience-pmi.jpg",
+      alt: "Daffa with faculty and staff in front of the Palang Merah Indonesia (PMI) Malang building",
+      width: 800,
+      height: 600,
+      layout: "wide",
+    },
   },
   {
     role: "Electrical and Mechanical Engineer",
@@ -19,8 +26,8 @@ export const experience = [
     period: "Jan 2026 – Feb 2026",
     location: "Batu, East Java · On-site",
     description:
-      "Designed PCB layouts in Autodesk Eagle for electrical systems and created a catalog of mechanical and electrical equipment designs, including machines, frames, racks, and electrical panels. Assembled and installed industrial machinery such as conveyors, and operated a laser welding machine and a Baison steel laser cutting machine. Assembled and programmed IoT devices for automation and monitoring, assisted with wiring single-phase and three-phase electrical panels, and prepared technical drawings and assembly procedures as production references.",
-    tags: ["Autodesk Eagle", "PCB Design", "Electrical Panels", "Industrial Machinery", "Laser Welding", "Laser Cutting", "IoT", "Technical Drawing"],
+      "Designed PCB layouts in Autodesk Eagle and EasyEDA for electrical systems and created a catalog of mechanical and electrical equipment designs, including machines, frames, racks, and electrical panels. Assembled and installed industrial machinery such as conveyors, and operated a laser welding machine and a Baison steel laser cutting machine. Assembled and programmed IoT devices for automation and monitoring, assisted with wiring single-phase and three-phase electrical panels, and prepared technical drawings and assembly procedures as production references.",
+    tags: ["Autodesk Eagle", "EasyEDA", "PCB Design", "Electrical Panels", "Industrial Machinery", "Laser Welding", "Laser Cutting", "IoT", "Technical Drawing"],
     photo: {
       src: "/assets/experience-enha.jpg",
       alt: "Daffa operating a handheld laser welder on a fixture table in the workshop at PT. Enha Bena Nusantara",

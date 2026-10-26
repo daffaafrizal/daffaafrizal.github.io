@@ -22,7 +22,7 @@ import Tags from "./Tags.astro";
             <Tags items={x.tags} />
           </div>
           {x.photo && (
-            <figure class="proj-photo tall">
+            <figure class:list={["proj-photo", { tall: x.photo.layout !== "wide" }]}>
               <img
                 src={x.photo.src}
                 alt={x.photo.alt}
