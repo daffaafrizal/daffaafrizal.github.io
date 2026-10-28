@@ -78,6 +78,71 @@ export const projects = [
     ],
   },
   {
+    title:
+      "Smart Fermentation Control System (SFCS-IoT): IoT-Based Air Quality and Humidity Control for Soy Sauce Fermentation Rooms",
+    kind: "Freelance Project",
+    period: "May 2025",
+    org: "Client case study: small-scale (UMKM) soy sauce industry",
+    band: "IoT · Automation",
+    summary:
+      "A prototype IoT monitoring and automatic control system that keeps soy sauce fermentation rooms within safe environmental limits, reading conditions in real time and exposing a remote dashboard.",
+    points: [
+      "Reads temperature, humidity (DHT22), and CO₂ level (MQ-135) every 2 seconds",
+      "Automatically runs the humidifier below 60% humidity and the exhaust fan above 500 ppm CO₂",
+      "Local 16x2 I2C LCD display plus a Blynk dashboard with live gauges and actuator status, powered by a portable 18650 battery",
+    ],
+    photoLayout: "wide",
+    photos: [
+      {
+        src: "/assets/project-sfcs-wiring.png",
+        alt: "Fritzing wiring diagram of the SFCS-IoT prototype: NodeMCU ESP8266, DHT22, MQ-135, 2-channel relay, LCD I2C, 18650 battery, fan, and humidifier",
+        width: 826,
+        height: 384,
+      },
+      {
+        src: "/assets/project-sfcs-dashboard.png",
+        alt: "Blynk dashboard showing live temperature, humidity, and CO2 gauges with humidifier and exhaust fan toggle controls",
+        width: 826,
+        height: 356,
+      },
+    ],
+  },
+  {
+    title: "Smart Farming System (SFS-IoT): Automatic Soil Moisture and Grow-Light Control",
+    kind: "Freelance Project",
+    period: "May 2025",
+    org: "Client case study: indoor farming / nursery growing media",
+    band: "IoT · Automation",
+    summary:
+      "A prototype IoT system that automates watering and grow lighting for planting media, reading soil moisture and light intensity in real time and driving a water pump and grow LEDs to match plant needs, with remote monitoring via a Blynk dashboard.",
+    points: [
+      "Reads soil status (Normal/Dry) from a soil moisture sensor and light level (0–600 lux) from an LDR every 2 seconds",
+      "Runs a 5V DC water pump automatically when the soil is dry, and a 5V grow LED strip when light drops below 300 lux",
+      "Local 16x2 I2C LCD display plus a Blynk dashboard with live gauges and pump/LED status, all packed into a compact, portable enclosure",
+    ],
+    photoLayout: "trio",
+    photos: [
+      {
+        src: "/assets/project-sfs-overview.jpg",
+        alt: "Open view of the Smart Farming System enclosure showing the NodeMCU, relay module, soil moisture sensor, and LDR wiring",
+        width: 1050,
+        height: 1400,
+      },
+      {
+        src: "/assets/project-sfs-wiring.png",
+        alt: "Fritzing wiring diagram of the SFS-IoT prototype: NodeMCU ESP8266, LCD I2C, 2-channel relay, soil moisture sensor, LDR, pump, and LED strip",
+        width: 588,
+        height: 487,
+      },
+      {
+        src: "/assets/project-sfs-dashboard.png",
+        alt: "Blynk dashboard showing soil status, a lux gauge, and pump/grow LED toggle controls",
+        width: 916,
+        height: 427,
+      },
+    ],
+  },
+  {
     title: "IoT-Based Air Quality Monitoring System Integrated with Solar Panel for Energy Efficiency",
     kind: "Final Project (D3)",
     period: "Jan 2024 – Jun 2024",
