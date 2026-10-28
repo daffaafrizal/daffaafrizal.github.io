@@ -1,4 +1,4 @@
-// Newest first. `photoLayout`: "wide" (4:3, default), "duo" (two tall images side by side), or "trio" (one big image + two stacked beside it).
+// Newest first. `photoLayout`: "wide" (4:3, default), "duo" (two tall images side by side), "trio" (one big image + two stacked beside it), or "quad" (2x2 grid of four images).
 export const projects = [
   {
     title: "Secure Smart Parking System: IoT-Based License Plate Recognition with AES Data Encryption",
@@ -120,8 +120,14 @@ export const projects = [
       "Runs a 5V DC water pump automatically when the soil is dry, and a 5V grow LED strip when light drops below 300 lux",
       "Local 16x2 I2C LCD display plus a Blynk dashboard with live gauges and pump/LED status, all packed into a compact, portable enclosure",
     ],
-    photoLayout: "trio",
+    photoLayout: "quad",
     photos: [
+      {
+        src: "/assets/project-sfs-glow.jpg",
+        alt: "Assembled Smart Farming System enclosure glowing under RGB strip lighting, with the LCD reading lux and dry soil status",
+        width: 1400,
+        height: 1050,
+      },
       {
         src: "/assets/project-sfs-overview.jpg",
         alt: "Open view of the Smart Farming System enclosure showing the NodeMCU, relay module, soil moisture sensor, and LDR wiring",
